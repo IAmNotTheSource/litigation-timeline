@@ -6,12 +6,12 @@ You have a 500-page scanned PDF from an insurance claim or litigation file. You 
 
 ## What it does
 
-1. **OCR** — Renders every page and extracts text via Tesseract (parallel, configurable DPI)
-2. **Segment** — Detects document boundaries (where one letter/email/report ends and another begins)
-3. **Classify** — Identifies document types: emails, letters, proof of loss, invoices, estimates, motions, sworn statements, etc.
-4. **Extract dates** — Pulls all dates from each document, picks the primary one
-5. **Describe** — Generates a concise description (sender, subject, key amounts, claim numbers)
-6. **Output** — Builds a formatted `.docx` table sorted chronologically
+1. **OCR** - Renders every page and extracts text via Tesseract (parallel, configurable DPI)
+2. **Segment** - Detects document boundaries (where one letter/email/report ends and another begins)
+3. **Classify** - Identifies document types: emails, letters, proof of loss, invoices, estimates, motions, sworn statements, etc.
+4. **Extract dates** - Pulls all dates from each document, picks the primary one
+5. **Describe** - Generates a concise description (sender, subject, key amounts, claim numbers)
+6. **Output** - Builds a formatted `.docx` table sorted chronologically
 
 Optional: pass `--llm-summarize` to use Claude for better document descriptions.
 
@@ -70,12 +70,12 @@ python timeline_builder.py input.pdf --llm-summarize
 
 ## Dependencies
 
-- [PyMuPDF](https://pymupdf.readthedocs.io/) — PDF rendering
-- [pytesseract](https://github.com/madmaze/pytesseract) + [Tesseract OCR](https://github.com/tesseract-ocr/tesseract) — OCR engine
-- [python-docx](https://python-docx.readthedocs.io/) — Word document generation
-- [Pillow](https://pillow.readthedocs.io/) — Image handling
-- [dateparser](https://dateparser.readthedocs.io/) — Date extraction
-- [anthropic](https://docs.anthropic.com/) — Optional, for LLM-enhanced descriptions
+- [PyMuPDF](https://pymupdf.readthedocs.io/) - PDF rendering
+- [pytesseract](https://github.com/madmaze/pytesseract) + [Tesseract OCR](https://github.com/tesseract-ocr/tesseract) - OCR engine
+- [python-docx](https://python-docx.readthedocs.io/) - Word document generation
+- [Pillow](https://pillow.readthedocs.io/) - Image handling
+- [dateparser](https://dateparser.readthedocs.io/) - Date extraction
+- [anthropic](https://docs.anthropic.com/) - Optional, for LLM-enhanced descriptions
 
 ## Customizing
 
